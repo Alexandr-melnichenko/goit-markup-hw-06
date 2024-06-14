@@ -213,6 +213,17 @@ color: #434455;
 margin: 0 auto;
 }
 
+@media (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+	.hero {
+	background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ), url(../images/hero-bg-mob@2x.jpg);
+	}
+	}
+
 .title-hero {
   display: block;
   font-weight: 700;
@@ -262,9 +273,19 @@ margin: 0 auto;
       ),
       url(../images/hero-bg-tab.jpg);
   }
+  @media (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+	.hero {
+	background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ), url(../images/hero-bg-tab@2x.jpg);
+	}
+	}
+
 
 }
-
 
 @media screen and (min-width: 1158px) {
 .hero {
@@ -284,10 +305,17 @@ margin: 0 auto;
     margin: 0 auto 48px;
   }
 
+  @media (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+	.hero {
+	background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ), url(../images/hero-bg-desk@2x.jpg);
+	}
+	}
 }
-
-
-
 
 /*----------------------------*/
 
@@ -308,15 +336,19 @@ margin: 0 auto;
 
 .company-box {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  /* gap: 24px; */
+  row-gap: 72px;
 }
 
 .section-company {
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
 }
 
 .li-company {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
+width: 100%;
 }
 
 .icon-box {
@@ -326,29 +358,72 @@ margin: 0 auto;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   margin-bottom: 8px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
 
 .company-sub-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  /* font-weight: 500; */
+  /* font-size: 20px; */
+  /* line-height: 1.2; */
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-top: 0;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .company-text {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  /* font-weight: 400; */
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+  .company-box{
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  }
+.li-company {
+  width: calc((100% - 24px) / 2);
+}
+.company-sub-title {
+  text-align: left;
+}
+
+}
+
+@media screen and (min-width: 1158px) {
+  .icon-box {
+    display: flex;
+  }
+.li-company {
+  width: calc((100% - 72px) / 4);
+}
+.section-company {
+  padding: 120px 0;
+}
+.company-sub-title {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+}
+
+.company-text {
+  font-weight: 400;
+}
+
+
 }
 /*----------------------------*/
 
