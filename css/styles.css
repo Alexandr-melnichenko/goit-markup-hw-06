@@ -418,24 +418,23 @@ font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 }
-
 .company-text {
   font-weight: 400;
 }
-
-
 }
 /*----------------------------*/
 
 /*-------------Our Team------------*/
 .section-team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 28px;
 }
 
 .li-section-team {
   background-color: #ffffff;
-  width: calc((100% - 24px * 3) / 4);
+  /* width: calc((100% - 24px * 3) / 4); */
+  min-width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -459,7 +458,10 @@ line-height: 1.2;
 
 .team-box {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  row-gap: 72px;
+  justify-content: center;
+  align-items: center;
 }
 
 .sub-title-section-team {
@@ -514,6 +516,30 @@ line-height: 1.2;
 .svg-soc-icon-style {
 fill: #f4f4fd;
 }
+
+@media screen and (min-width: 768px) {
+
+  .team-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+
+}
+
+@media screen and (min-width: 1158px) {
+
+  .section-team {
+    padding: 120px 0;
+  }
+
+.li-section-team {
+  width: calc((100% - 24px * 3) / 4);
+}
+
+}
+
 
 /*----------------------------*/
 
