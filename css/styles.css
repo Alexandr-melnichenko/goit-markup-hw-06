@@ -139,8 +139,8 @@ line-height: 0;
   }
   
   .address-link {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -200,7 +200,7 @@ color: #434455;
   background-color: #2e2f42;
   /* padding-bottom: 188px;
   padding-top: 188px; */
-  padding: 72px 52px;
+  padding: 72px 0;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
@@ -266,7 +266,7 @@ margin: 0 auto;
   margin: 0 auto 36px;
 }
 .hero {
-  padding: 112px 136px;
+  padding: 112px 0;
   background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
@@ -865,7 +865,7 @@ margin-right: 16px;
     flex-direction: row;
   flex-wrap: wrap;
  justify-content: start;
- padding: 0 108px;
+ width: 584px;
   }
   .footer-form {
     flex-direction: row;
@@ -893,6 +893,7 @@ margin-right: 16px;
 
   .footer-container {
     flex-wrap: nowrap;
+    width: 100%;
   }
  .footer-rirst-collumn {
   margin-right: 120px;
@@ -905,9 +906,6 @@ margin-right: 16px;
 .input-email {
   opacity: 100%;
   min-width: 264px;
-}
-.footer-container {
-  padding: 0;
 }
 
 .footer {
@@ -1206,6 +1204,10 @@ margin-right: 8px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .is-open {
@@ -1218,7 +1220,7 @@ margin-right: 8px;
 display: flex;
 flex-direction: column;
 gap: 40px;
-margin-bottom: 168px;
+margin-bottom: auto; 
 }
 
 .mobile-nav-link {
@@ -1227,6 +1229,14 @@ font-size: 36px;
 line-height: 1.11;
 letter-spacing: 0.02em;
 color: #2E2F42;
+}
+
+.mobile-nav-link-cheked {
+  font-weight: 700;
+font-size: 36px; 
+line-height: 1.11;
+letter-spacing: 0.02em;
+  color: #404BBF;
 }
 
 .mobile-nav-link:hover,
@@ -1249,6 +1259,16 @@ color: #2E2F42;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-style: normal;
 }
+
+.mobile-address-link-cheked {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-style: normal;
+  color: #4D5AE5;
+}
+
 .mobile-address-link:hover,
 .mobile-address-link:focus {
   color: #4D5AE5;
@@ -1266,6 +1286,5 @@ color: #2E2F42;
   }
 
 }
-
 
 /* -------------------------- */
